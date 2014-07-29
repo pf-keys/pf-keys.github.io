@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Generator</title>
+	<script type='text/javascript' src='http://code.jquery.com/jquery-git.js'></script>
+	<script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+			</button>
+			<a class="navbar-brand" href="#">Горячие клавиши Sabre</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li>
+					<a href="index.html">Вписывание</a>
+				</li>
+				<li class="active">
+					<a href="spectra.html">Spectra</a>
+				</li>
+				<li>
+					<a href="other.html">Другие</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="row">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-2">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="ALL" onchange="disableboxes('all');"> Все
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="AL"> Авиакомпания
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="FL"> Номер рейса
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="SD"> Дата рейса
+			</label>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="BO"> Маршрут
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value=""  id="NA"> Имя пассажира
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="IN"> Наличие младенцев
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="DK"> DK номер
+			</label>
+		</div>
+	</div>
+	<div class="col-md-2">
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="RM"> Ремарка
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="TD" onchange="disableboxes('td');"> Дата тайм-лимита
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="SI"> Подпись агента
+			</label>
+		</div>
+		<div class="checkbox">
+			<label>
+				<input type="checkbox" value="" id="CD"> Дата создания брони
+			</label>
+		</div>
+	</div>
+	<div class="col-md-3">
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-3">
+	</div>
+	<div class="col-md-6">
+		<button type="button" class="btn btn-primary btn-lg btn-block" onclick="generatespectra();">Генерировать</button>
+		<br>
+		<textarea class="form-control" id="textresult" rows="6"></textarea>
+	</div>
+	<div class="col-md-3">
+	</div>
+</div>
+</body>
+</html>

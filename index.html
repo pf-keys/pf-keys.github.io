@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title>Generator</title>
+	<script type='text/javascript' src='http://code.jquery.com/jquery-git.js'></script>
+	<script type='text/javascript' src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type='text/javascript' src="script.js"></script>
+	<link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+  <body>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+			</button>
+			<a class="navbar-brand" href="#">Горячие клавиши Sabre</a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active">
+					<a href="index.html">Вписывание</a>
+				</li>
+				<li>
+					<a href="spectra.html">Spectra</a>
+				</li>
+				<li>
+					<a href="other.html">Другие</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="row" id="generator">
+		<div class="col-md-2">
+		</div>
+		<div class="col-md-8">
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Область</th>
+						<th class="td0"></th>
+						<th class="td1">A</th>
+						<th class="td2">B</th>
+						<th class="td3">C</th>
+						<th class="td4">D</th>
+						<th class="td5">E</th>
+						<th class="td6">F</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="subject">Активная область</td>
+						<td class="td0 tr0"><div class="td"></div></td>
+						<td class="td1 tr0"><div class="td"><input type="checkbox" class="checkbox" id="1checkbox" onchange="toggledis(1);" checked></div></td>
+						<td class="td2 tr0"><div class="td"><input type="checkbox" class="checkbox" id="2checkbox" onchange="toggledis(2);" checked></div></td>
+						<td class="td3 tr0"><div class="td"><input type="checkbox" class="checkbox" id="3checkbox" onchange="toggledis(3);" checked></div></td>
+						<td class="td4 tr0"><div class="td"><input type="checkbox" class="checkbox" id="4checkbox" onchange="toggledis(4);" checked></div></td>
+						<td class="td5 tr0"><div class="td"><input type="checkbox" class="checkbox" id="5checkbox" onchange="toggledis(5);" checked></div></td>
+						<td class="td6 tr0"><div class="td"><input type="checkbox" class="checkbox" id="6checkbox" onchange="toggledis(6);" checked></div></td>
+					</tr>
+					<tr>
+						<td>
+						</td>
+						<td colspan=7 class="choosearea">
+							<br>
+							<div class="btn-group button-down" data-toggle="buttons">
+								<label class="choosearea left btn btn-sm btn-default active">
+									<input type="radio" name="chooseareasignin" id="ABCDEFsignin" value="ABCDEFsignin" onchange="showareassignin();" checked>
+									Идивидуально для каждой области
+								</label>
+									<label class="choosearea right btn btn-sm btn-default">
+									<input type="radio" name="chooseareasignin" id="ALLsignin" value="Allsignin" onchange="showareassignin();">
+									Одинаково для всех областей
+								</label>
+							</div>
+						</td>
+					</tr>
+					<tr class="bt">
+						<td class="subject bl">Референция <span class="asterisk">*</span></td>
+						<td class="td0 tr1 br" colspan=6><div class="td"><input type="text" class="form-control uppercase 0input" id="0Reference" placeholder="SI" maxlength="4"></div></td>
+						<td class="td1 tr1"><div class="td"><input type="text" class="form-control uppercase 1input" id="1Reference" placeholder="SI" maxlength="4"></div></td>
+						<td class="td2 tr1"><div class="td"><input type="text" class="form-control uppercase 2input" id="2Reference" placeholder="SI" maxlength="4"></div></td>
+						<td class="td3 tr1"><div class="td"><input type="text" class="form-control uppercase 3input" id="3Reference" placeholder="SI" maxlength="4"></div></td>
+						<td class="td4 tr1"><div class="td"><input type="text" class="form-control uppercase 4input" id="4Reference" placeholder="SI" maxlength="4"></div></td>
+						<td class="td5 tr1"><div class="td"><input type="text" class="form-control uppercase 5input" id="5Reference" placeholder="SI" maxlength="4"></div></td>
+						<td class="td6 tr1 br"><div class="td"><input type="text" class="form-control uppercase 6input" id="6Reference" placeholder="SI" maxlength="4"></div></td>
+					</tr>
+					<tr>
+						<td class="subject bl">PCC</td>
+						<td class="td0 tr2 br" colspan=6><div class="td"><input type="text" class="form-control uppercase 0input" id="0PCC" placeholder="PCC" maxlength="4"></div></td>
+						<td class="td1 tr2"><div class="td"><input type="text" class="form-control uppercase 1input" id="1PCC" placeholder="PCC" maxlength="4"></div></td>
+						<td class="td2 tr2"><div class="td"><input type="text" class="form-control uppercase 2input" id="2PCC" placeholder="PCC" maxlength="4"></div></td>
+						<td class="td3 tr2"><div class="td"><input type="text" class="form-control uppercase 3input" id="3PCC" placeholder="PCC" maxlength="4"></div></td>
+						<td class="td4 tr2"><div class="td"><input type="text" class="form-control uppercase 4input" id="4PCC" placeholder="PCC" maxlength="4"></div></td>
+						<td class="td5 tr2"><div class="td"><input type="text" class="form-control uppercase 5input" id="5PCC" placeholder="PCC" maxlength="4"></div></td>
+						<td class="td6 tr2 br"><div class="td"><input type="text" class="form-control uppercase 6input" id="6PCC" placeholder="PCC" maxlength="4"></div></td>
+					</tr>
+					<tr class="bt">
+						<td colspan=8></td>
+					</tr>
+					<tr class="bt">
+						<td class="subject bl">Переходить в PCC (AAA)</td>
+						<td class="td0 tr3 br"><div class="td"><input type="text" class="form-control uppercase 0input" id="0AAA" placeholder="AAA" maxlength="4"></div></td>
+						<td class="td1 tr3"><div class="td"><input type="text" class="form-control uppercase 1input" id="1AAA" placeholder="AAA" maxlength="4"></div></td>
+						<td class="td2 tr3"><div class="td"><input type="text" class="form-control uppercase 2input" id="2AAA" placeholder="AAA" maxlength="4"></div></td>
+						<td class="td3 tr3"><div class="td"><input type="text" class="form-control uppercase 3input" id="3AAA" placeholder="AAA" maxlength="4"></div></td>
+						<td class="td4 tr3"><div class="td"><input type="text" class="form-control uppercase 4input" id="4AAA" placeholder="AAA" maxlength="4"></div></td>
+						<td class="td5 tr3"><div class="td"><input type="text" class="form-control uppercase 5input" id="5AAA" placeholder="AAA" maxlength="4"></div></td>
+						<td class="td6 tr3 br"><div class="td"><input type="text" class="form-control uppercase 6input" id="6AAA" placeholder="AAA" maxlength="4"></div></td>
+					</tr>
+					<tr>
+						<td class="bt">
+						</td>
+						<td colspan=7 class="choosearea bt">
+							<br>
+							<div class="btn-group button-down" data-toggle="buttons">
+								<label class="choosearea left btn btn-sm btn-default active">
+									<input type="radio" name="chooseareaptr" id="ABCDEFptr" value="ABCDEFptr" onchange="showareasptr();" checked>
+									Идивидуально для каждой области
+								</label>
+									<label class="choosearea right btn btn-sm btn-default">
+									<input type="radio" name="chooseareaptr" id="ALLptr" value="Allptr" onchange="showareasptr();">
+									Одинаково для всех областей
+								</label>
+							</div>
+						</td>
+					</tr>
+					<tr class="bt">
+						<td class="subject bl">Принтер</td>
+						<td class="td0 tr4 br" colspan=6><div class="td middletd"><form class="form-inline" role="form"><div class="form-group"><div class="radio"><label><input type="radio" class="0input" name="0PTRTAORPPS" id="01PTRTAORPPS" value="PTRTA" onchange="toggleptrtapps(0);" checked> PTRTA</label></div><br><div class="radio"><label><input type="radio" class="0input" name="0PTRTAORPPS" id="02PTRTAORPPS" value="PPS" onchange="toggleptrtapps(0);"> PPS</label></div><br><div class="radio"><label><input type="radio" class="0input" name="0PTRTAORPPS" id="03PTRTAORPPS" value="None" onchange="toggleptrtapps(0);"> Нет</label></div></div></form></div></td>
+						<td class="td1 tr4"><div class="td"><div class="radio"><label><input type="radio" class="1input" name="1PTRTAORPPS" id="11PTRTAORPPS" value="PTRTA" onchange="toggleptrtapps(1);" checked>PTRTA</label></div><div class="radio"><label><input type="radio" class="1input" name="1PTRTAORPPS" id="12PTRTAORPPS" value="PPS" onchange="toggleptrtapps(1);">PPS</label></div><div class="radio"><label><input type="radio" class="1input" name="1PTRTAORPPS" id="13PTRTAORPPS" value="None" onchange="toggleptrtapps(1);">Нет</label></div></div></td>
+						<td class="td2 tr4"><div class="td"><div class="radio"><label><input type="radio" class="2input" name="2PTRTAORPPS" id="21PTRTAORPPS" value="PTRTA" onchange="toggleptrtapps(2);" checked>PTRTA</label></div><div class="radio"><label><input type="radio" class="2input" name="2PTRTAORPPS" id="22PTRTAORPPS" value="PPS" onchange="toggleptrtapps(2);">PPS</label></div><div class="radio"><label><input type="radio" class="2input" name="2PTRTAORPPS" id="23PTRTAORPPS" value="None" onchange="toggleptrtapps(2);">Нет</label></div></div></td>
+						<td class="td3 tr4"><div class="td"><div class="radio"><label><input type="radio" class="3input" name="3PTRTAORPPS" id="31PTRTAORPPS" value="PTRTA" onchange="toggleptrtapps(3);" checked>PTRTA</label></div><div class="radio"><label><input type="radio" class="3input" name="3PTRTAORPPS" id="32PTRTAORPPS" value="PPS" onchange="toggleptrtapps(3);">PPS</label></div><div class="radio"><label><input type="radio" class="3input" name="3PTRTAORPPS" id="33PTRTAORPPS" value="None" onchange="toggleptrtapps(3);">Нет</label></div></div></td>
+						<td class="td4 tr4"><div class="td"><div class="radio"><label><input type="radio" class="4input" name="4PTRTAORPPS" id="41PTRTAORPPS" value="PTRTA" onchange="toggleptrtapps(4);" checked>PTRTA</label></div><div class="radio"><label><input type="radio" class="4input" name="4PTRTAORPPS" id="42PTRTAORPPS" value="PPS" onchange="toggleptrtapps(4);">PPS</label></div><div class="radio"><label><input type="radio" class="4input" name="4PTRTAORPPS" id="43PTRTAORPPS" value="None" onchange="toggleptrtapps(4);">Нет</label></div></div></td>
+						<td class="td5 tr4"><div class="td"><div class="radio"><label><input type="radio" class="5input" name="5PTRTAORPPS" id="51PTRTAORPPS" value="PTRTA" onchange="toggleptrtapps(5);" checked>PTRTA</label></div><div class="radio"><label><input type="radio" class="5input" name="5PTRTAORPPS" id="52PTRTAORPPS" value="PPS" onchange="toggleptrtapps(5);">PPS</label></div><div class="radio"><label><input type="radio" class="5input" name="5PTRTAORPPS" id="53PTRTAORPPS" value="None" onchange="toggleptrtapps(5);">Нет</label></div></div></td>
+						<td class="td6 tr4 br"><div class="td"><div class="radio"><label><input type="radio" class="6input" name="6PTRTAORPPS" id="61PTRTAORPPS" value="PTRTA" onchange="toggleptrtapps(6);" checked>PTRTA</label></div><div class="radio"><label><input type="radio" class="6input" name="6PTRTAORPPS" id="62PTRTAORPPS" value="PPS" onchange="toggleptrtapps(6);">PPS</label></div><div class="radio"><label><input type="radio" class="6input" name="6PTRTAORPPS" id="63PTRTAORPPS" value="None" onchange="toggleptrtapps(6);">Нет</label></div></div></td>
+					</tr>
+					<tr>
+						<td class="subject bl">Терминальный адрес принтера (PTRTA) <span class="asterisk">*</span></td>
+						<td class="td0 tr5 br" colspan=6><div class="td"><input type="text" class="form-control uppercase 0input" id="0PTRTA" placeholder="PTRTA" maxlength="6"></div></td>
+						<td class="td1 tr5"><div class="td"><input type="text" class="form-control uppercase 1input" id="1PTRTA" placeholder="PTRTA" maxlength="6"></div></td>
+						<td class="td2 tr5"><div class="td"><input type="text" class="form-control uppercase 2input" id="2PTRTA" placeholder="PTRTA" maxlength="6"></div></td>
+						<td class="td3 tr5"><div class="td"><input type="text" class="form-control uppercase 3input" id="3PTRTA" placeholder="PTRTA" maxlength="6"></div></td>
+						<td class="td4 tr5"><div class="td"><input type="text" class="form-control uppercase 4input" id="4PTRTA" placeholder="PTRTA" maxlength="6"></div></td>
+						<td class="td5 tr5"><div class="td"><input type="text" class="form-control uppercase 5input" id="5PTRTA" placeholder="PTRTA" maxlength="6"></div></td>
+						<td class="td6 tr5 br"><div class="td"><input type="text" class="form-control uppercase 6input" id="6PTRTA" placeholder="PTRTA" maxlength="6"></div></td>
+					</tr>
+					<tr>
+						<td class="subject bl">Сток <span class="asterisk">*</span></td>
+						<td class="td0 tr6 br" colspan=6><div class="td"><select class="form-control 0input" id="0STOCK"><option>-</option><option>BSP</option><option>SU</option><option>S7</option><option>TCH</option></select></div></td>
+						<td class="td1 tr6"><div class="td"><select class="form-control 1input" id="1STOCK"><option>-</option><option>BSP</option><option>SU</option><option>S7</option><option>TCH</option></select></div></td>
+						<td class="td2 tr6"><div class="td"><select class="form-control 2input" id="2STOCK"><option>-</option><option>BSP</option><option>SU</option><option>S7</option><option>TCH</option></select></div></td>
+						<td class="td3 tr6"><div class="td"><select class="form-control 3input" id="3STOCK"><option>-</option><option>BSP</option><option>SU</option><option>S7</option><option>TCH</option></select></div></td>
+						<td class="td4 tr6"><div class="td"><select class="form-control 4input" id="4STOCK"><option>-</option><option>BSP</option><option>SU</option><option>S7</option><option>TCH</option></select></div></td>
+						<td class="td5 tr6"><div class="td"><select class="form-control 5input" id="5STOCK"><option>-</option><option>BSP</option><option>SU</option><option>S7</option><option>TCH</option></select></div></td>
+						<td class="td6 tr6 br"><div class="td"><select class="form-control 6input" id="6STOCK"><option>-</option><option>BSP</option><option>SU</option><option>S7</option><option>TCH</option></select></div></td>
+					</tr>
+					<tr>
+						<td class="subject bl">Профиль принтера (PPS) <span class="asterisk">*</span></td>
+						<td class="td0 tr7 br" colspan=6><div class="td"><select class="form-control 0input" id="0PPS" disabled><option>-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div></td>
+						<td class="td1 tr7"><div class="td"><select class="form-control 1input" id="1PPS" disabled><option>-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div></td>
+						<td class="td2 tr7"><div class="td"><select class="form-control 2input" id="2PPS" disabled><option>-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div></td>
+						<td class="td3 tr7"><div class="td"><select class="form-control 3input" id="3PPS" disabled><option>-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div></td>
+						<td class="td4 tr7"><div class="td"><select class="form-control 4input" id="4PPS" disabled><option>-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div></td>
+						<td class="td5 tr7"><div class="td"><select class="form-control 5input" id="5PPS" disabled><option>-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div></td>
+						<td class="td6 tr7 br"><div class="td"><select class="form-control 6input" id="6PPS" disabled><option>-</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div></td>
+					</tr>
+					<tr class="bt">
+						<td colspan=8>
+							<button type="button" class="btn btn-primary btn-lg btn-block" onclick="generate();">Генерировать</button>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<textarea class="form-control" id="textresult" rows="6"></textarea>
+			<br>
+		</div>
+		<div class="col-md-2">
+		</div>
+	</div>
+</body>
+</html>

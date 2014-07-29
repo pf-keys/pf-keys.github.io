@@ -1,0 +1,41 @@
+.uppercase {text-transform: uppercase;}
+.td0 {display: none;}
+#areabuttons, #chooseclear, h1 {text-align: center;}
+.choosearea {
+    text-align: center;
+    padding-bottom: 0 !important;
+}
+.danger {
+	background-color: #a94442;
+	border-radius: 0.5em;
+}
+.td {padding: 4px;}
+td {vertical-align: middle !important;}
+.left {border-radius: 0.5em 0 0 0 !important;
+border-top: 3px solid #4072b4 !important;
+border-left: 3px solid #4072b4 !important;}
+.right {border-radius: 0 0.5em 0 0 !important;
+border-top: 3px solid #4072b4 !important;
+border-right: 3px solid #4072b4 !important;}
+#box {
+	border: 2px !important;
+	border-color: gray;
+	padding: 4px;
+}
+.asterisk {
+	vertical-align: super;
+	color: #ff0000;
+}
+td {border-top: 0px solid #4072b4 !important;}
+.bt {border-top: 3px solid #4072b4 !important;}
+.br {border-right: 3px solid #4072b4 !important;}
+.bl {border-left: 3px solid #4072b4 !important;}
+.button-down {top: 3px !important;}
+.middletd {
+    margin: auto;
+    vertical-align: middle;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    align: center;
+}
